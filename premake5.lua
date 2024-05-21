@@ -46,7 +46,6 @@ workspace "Emma Utils Workspace"
 project "Emma Utils"
     filename "EmmaUtils"
     targetname "EmmaUtils"
-    targetprefix ""
     targetdir "build/%{cfg.platform}/%{cfg.buildcfg}"
     objdir "build/%{cfg.platform}/%{cfg.buildcfg}/obj"
 
