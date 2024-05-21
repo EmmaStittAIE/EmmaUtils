@@ -29,7 +29,7 @@ config="debug"
 platform="linux"
 
 # getopts loop
-while getopts "hrdc:p:" options; do
+while getopts "hc:p:" options; do
 
     case "${options}" in
 

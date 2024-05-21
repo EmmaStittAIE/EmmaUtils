@@ -52,14 +52,19 @@ project "Emma Utils"
 
     prebuildcommands
     {
-        "{MKDIR} %[build/%{cfg.platform}/%{cfg.buildcfg}]"
+        "{MKDIR} %[build/%{cfg.platform}/%{cfg.buildcfg}]",
         "{RMDIR} %[build/%{cfg.platform}/%{cfg.buildcfg}/include]",
-        "{COPYDIR} %[include] %[build/%{cfg.platform}/%{cfg.buildcfg}]",
+        "{COPYDIR} %[include] %[build/%{cfg.platform}/%{cfg.buildcfg}]"
+    }
+
+    includedirs
+    {
+        "include"
     }
 
     files
     {
-        "src/**.cpp",
+        "src/**.cpp"
     }
 
     kind "StaticLib"
