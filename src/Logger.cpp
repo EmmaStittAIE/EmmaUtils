@@ -33,6 +33,4 @@ void Logger::Log(std::initializer_list<std::string> messageText, LogType type)
 		std::cerr << timeString << "Error: " << concatMessage << std::endl;
 		break;
 	}
-
-	std::cout << timeString << concatMessage << std::endl;
 }
