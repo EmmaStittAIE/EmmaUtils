@@ -1,0 +1,11 @@
+# Project
+build/*
+!build/BuildScriptLinux.sh
+
+generated/*
+
+# Kate (Text Editor)
+*.kate-swp
+
+# VSCode
+.vscode/
