@@ -1,4 +1,4 @@
-#include "EmmaUtils/Logger.hpp"
+#include "Logger.hpp"
 
 #include <iostream>
 #include <format>
