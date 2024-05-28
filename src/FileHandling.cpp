@@ -1,8 +1,8 @@
-#include "FileHandling.hpp"
+#include "EmmaUtils/FileHandling.hpp"
 
 #include <cstring>
 
-#include "Logger.hpp"
+#include "EmmaUtils/Logger.hpp"
 
 const std::string FileHandling::LoadFileToString(std::string filePath)
 {
