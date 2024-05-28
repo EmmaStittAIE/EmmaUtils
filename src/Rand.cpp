@@ -1,4 +1,4 @@
-#include "EmmaUtils/Rand.hpp"
+#include "Rand.hpp"
 
 #include <random>
 
