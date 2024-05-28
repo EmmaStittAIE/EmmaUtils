@@ -58,7 +58,7 @@ project "Emma Utils"
 
     includedirs
     {
-        "include/EmmaUtils"
+        "include"
     }
 
     files
