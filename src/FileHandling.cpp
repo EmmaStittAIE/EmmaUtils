@@ -3,7 +3,6 @@
 #include <cstring>
 
 #include "EmmaUtils/Logger.hpp"
-#include "FileHandling.hpp"
 
 const std::string FileHandling::LoadFileToString(std::string filePath)
 {
