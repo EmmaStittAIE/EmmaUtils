@@ -10,7 +10,7 @@ const std::string FileHandling::LoadFileToString(std::string filePath)
 
 	std::ifstream file(filePath, std::ios_base::in);
 
-	if (file.fail())
+	if (file.is_open())
 	{
 		throw std::runtime_error("File at path \"" + filePath + "\" could not be read: " + std::strerror(errno));
 	}
@@ -18,6 +18,11 @@ const std::string FileHandling::LoadFileToString(std::string filePath)
 	while (!(file.peek() == EOF))
 	{
 		fileContent << (char)file.get();
+
+		if (file.fail())
+		{
+			throw std::runtime_error("Something went wrong while reading the file at \"" + filePath + "\": " + std::strerror(errno));
+		}
 	}
 
 	file.close();
@@ -29,7 +34,7 @@ const std::vector<char> FileHandling::LoadFileToByteArray(std::string filePath)
 {
 	std::ifstream file(filePath,  std::ios_base::in | std::ios_base::ate | std::ios_base::binary);
 
-	if (file.fail())
+	if (file.is_open())
 	{
 		throw std::runtime_error("File at path \"" + filePath + "\" could not be read: " + std::strerror(errno));
 	}
@@ -39,6 +44,11 @@ const std::vector<char> FileHandling::LoadFileToByteArray(std::string filePath)
 
 	file.seekg(0);
 	file.read(buffer.data(), bufferSize);
+
+	if (file.fail())
+	{
+		throw std::runtime_error("Something went wrong while reading the file at \"" + filePath + "\": " + std::strerror(errno));
+	}
 
 	file.close();
 
