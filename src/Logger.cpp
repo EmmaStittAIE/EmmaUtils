@@ -24,16 +24,16 @@ void Logger::Log(std::initializer_list<std::string> messageText, LogType type)
 		std::cout << timeString << concatMessage << std::endl;
 		break;
 	case Info:
-		std::cout << timeString << "Info: " << concatMessage << std::endl;
+		std::cout << timeString << "Info        | " << concatMessage << std::endl;
 		break;
 	case Warning:
-		std::cerr << timeString << "Warning: " << concatMessage << std::endl;
+		std::cerr << timeString << "Warning     | " << concatMessage << std::endl;
 		break;
 	case Error:
-		std::cerr << timeString << "Error: " << concatMessage << std::endl;
+		std::cerr << timeString << "Error       | " << concatMessage << std::endl;
 		break;
 	case Fatal:
-		std::cerr << timeString << "Fatal Error: " << concatMessage << std::endl;
+		std::cerr << timeString << "Fatal Error | " << concatMessage << std::endl;
 		break;
 	}
 }
