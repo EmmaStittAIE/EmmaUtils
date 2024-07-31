@@ -8,7 +8,8 @@ enum LogType
 	None,
 	Info,
 	Warning,
-	Error
+	Error,
+	Fatal
 };
 
 namespace Logger

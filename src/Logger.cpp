@@ -32,5 +32,8 @@ void Logger::Log(std::initializer_list<std::string> messageText, LogType type)
 	case Error:
 		std::cerr << timeString << "Error: " << concatMessage << std::endl;
 		break;
+	case Fatal:
+		std::cerr << timeString << "Fatal Error: " << concatMessage << std::endl;
+		break;
 	}
 }
